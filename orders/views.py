@@ -2,7 +2,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from django.shortcuts import get_object_or_404
-from .models import Order
+from .models import Order, Client
 from .serializers import OrderSerializer, OrderStatusSerializer
 from drf_yasg.utils import swagger_auto_schema
 
@@ -22,10 +22,12 @@ class OrderListCreateView(APIView):
         serializer = OrderSerializer(data=request.data, context={'request': request})
         if serializer.is_valid():
             serializer.save()
+            
             return Response({"message": "Order created successfully"}, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
     def get(self, request):
-        products = Order.objects.all()
-        serializer = OrderSerializer(products, many=True)
+        user = Client.objects.get(id=1)
+        orders = Order.objects.filter(client=user).order_by('-created_at')
+        serializer = OrderSerializer(orders, many=True)
         return Response(serializer.data)

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Order, OrderItem, Product
+from .models import Order, OrderItem, Product, Client
 
 class OrderItemCreateSerializer(serializers.Serializer):
     product = serializers.PrimaryKeyRelatedField(queryset=Product.objects.all())
@@ -7,15 +7,18 @@ class OrderItemCreateSerializer(serializers.Serializer):
 
 class OrderSerializer(serializers.ModelSerializer):
     items = OrderItemCreateSerializer(many=True)
+    id = serializers.IntegerField(read_only=True)
+    status = serializers.CharField(read_only=True)
+    created_at = serializers.DateTimeField(read_only=True)
+    total_sum = serializers.DecimalField(max_digits=12, decimal_places=2, read_only=True)
 
     class Meta:
         model = Order
-        fields = ['items']
-        read_only_fields = ['status', 'created_at', 'total_sum']
+        fields = ['id', 'items', 'status', 'created_at', 'total_sum']
 
     def create(self, validated_data):
         items_data = validated_data.pop('items')
-        client = self.context['request'].user
+        client = Client.objects.get(id=1) #self.context['request'].user
         total_sum = 0
         validated_items = []
 
@@ -37,6 +40,9 @@ class OrderSerializer(serializers.ModelSerializer):
 
         for product, quantity in validated_items:
             OrderItem.objects.create(order=order, product=product, quantity=quantity)
+
+            product.stock_quantity -= quantity
+            product.save()
 
         return order
 

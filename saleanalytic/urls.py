@@ -42,10 +42,14 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
     path('products/<int:pk>/', ProductDetailApiView.as_view(), name='product-view'),
     path('products/', ProductListCreateApiView.as_view(), name='product-list-create-view'),
+
     path('clients/', ClientListCreateApiView.as_view(), name='client-list-create-view'),
-    path('orders/', OrderListCreateView.as_view(), name='')
+
+    path('orders/<int:pk>/', OrderStatusUpdateApiView.as_view(), name='order-status-update-view'),
+    path('orders/', OrderListCreateView.as_view(), name='order-list-create-view'),
 
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
