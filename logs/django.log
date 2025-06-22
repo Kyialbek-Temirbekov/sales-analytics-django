@@ -47,7 +47,6 @@
 [2025-06-22 15:50:26,463] INFO django.utils.autoreload /home/kyialbek/Projects/python_workspace/Kassir/orders/views.py changed, reloading.
 [2025-06-22 15:50:26,914] INFO django.utils.autoreload Watching for file changes with StatReloader
 [2025-06-22 15:50:47,651] INFO django.utils.autoreload Watching for file changes with StatReloader
-
 [2025-06-22 15:53:54,342] INFO django.utils.autoreload /home/kyialbek/Projects/python_workspace/Kassir/orders/views.py changed, reloading.
 [2025-06-22 15:53:54,916] INFO django.utils.autoreload Watching for file changes with StatReloader
 [2025-06-22 15:54:01,034] INFO orders.views Sales Analytics report created
