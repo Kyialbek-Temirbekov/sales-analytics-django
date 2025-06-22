@@ -1,3 +1,11 @@
 [2025-06-22 15:09:06,718] INFO django.utils.autoreload Watching for file changes with StatReloader
 [2025-06-22 15:09:14,765] INFO orders.views Sales Analytics report created
 [2025-06-22 15:09:14,766] INFO django.server "GET /reports/sales/ HTTP/1.1" 200 9873
+[2025-06-22 15:26:49,306] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-22 15:27:09,142] INFO orders.views Order created
+[2025-06-22 15:27:09,147] INFO django.server "POST /orders/ HTTP/1.1" 201 40
+[2025-06-22 15:30:01,944] INFO django.utils.autoreload /home/kyialbek/Projects/python_workspace/Kassir/orders/serializers.py changed, reloading.
+[2025-06-22 15:30:02,471] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-22 15:30:21,485] INFO orders.serializers Subtotal '100.00', Total '412.0000'
+[2025-06-22 15:30:21,490] INFO orders.views Order created
+[2025-06-22 15:30:21,491] INFO django.server "POST /orders/ HTTP/1.1" 201 40
