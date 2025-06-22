@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <style>
+        body { font-family: sans-serif; }
+        h1 { color: #333; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            font-size: 12px;
+        }
+        th, td {
+            border: 1px solid #888;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ title }}</h1>
+
+    <p><strong>Total Revenue:</strong> {{ total_revenue }} </p>
+    <p><strong>Order Count:</strong> {{ order_count }} </p>
+
+    <h2>Top 5 Clients by Revenue</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Client</th>
+                <th>Revenue</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for client in top_clients %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ client.client__full_name }}</td>
+                <td>{{ client.revenue }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>Most Popular Product</h2>
+    {% if most_popular_product %}
+    <p><strong>{{ most_popular_product.product__name }}</strong> — {{ most_popular_product.total_quantity }} sold</p>
+    {% else %}
+    <p>No product data available.</p>
+    {% endif %}
+
+    <h2>All Orders</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Date</th>
+                <th>Client</th>
+                <th>Total</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ order.created_at.strftime("%Y-%m-%d %H:%M") }}</td>
+                <td>{{ order.client__full_name }}</td>
+                <td>{{ order.total_sum }}</td>
+                <td>{{ order.status }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

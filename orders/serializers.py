@@ -41,9 +41,6 @@ class OrderSerializer(serializers.ModelSerializer):
         for product, quantity in validated_items:
             OrderItem.objects.create(order=order, product=product, quantity=quantity)
 
-            product.stock_quantity -= quantity
-            product.save()
-
         return order
 
 class OrderStatusSerializer(serializers.ModelSerializer):
