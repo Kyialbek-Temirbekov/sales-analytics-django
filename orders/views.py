@@ -54,7 +54,7 @@ class OrderListCreateView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
     def get(self, request):
-        user = Client.objects.get(id=1)
+        user = request.user
         orders = Order.objects.filter(client=user).order_by('-created_at')
         serializer = OrderSerializer(orders, many=True)
         return Response(serializer.data)

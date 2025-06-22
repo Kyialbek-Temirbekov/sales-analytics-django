@@ -61,3 +61,35 @@
 [2025-06-22 15:59:21,600] INFO django.server "GET /reports/sales/?start=2025-06-01&end=2025-06-20 HTTP/1.1" 200 7759
 [2025-06-22 15:59:31,869] INFO orders.views Sales Analytics report created
 [2025-06-22 15:59:31,870] INFO django.server "GET /reports/sales/?start=2025-06-01&end=2025-06-25 HTTP/1.1" 200 10127
+[2025-06-22 16:08:56,255] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-22 16:09:11,782] INFO orders.views Sales Analytics report created
+[2025-06-22 16:09:11,783] INFO django.server "GET /api/reports/sales/?start=2025-06-01&end=2025-06-25 HTTP/1.1" 200 10127
+[2025-06-22 16:10:24,682] INFO django.server "GET /admin/accounts/client/ HTTP/1.1" 200 11258
+[2025-06-22 16:10:24,751] INFO django.server "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[2025-06-22 16:10:24,755] INFO django.server "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+[2025-06-22 16:10:24,757] INFO django.server "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[2025-06-22 16:10:24,762] INFO django.server "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+[2025-06-22 16:10:24,768] INFO django.server "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[2025-06-22 16:10:24,769] INFO django.server "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+[2025-06-22 16:10:24,770] INFO django.server "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+[2025-06-22 16:10:24,782] INFO django.server "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[2025-06-22 16:10:24,783] INFO django.server "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[2025-06-22 16:10:24,785] INFO django.server "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[2025-06-22 16:10:24,797] INFO django.server "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+[2025-06-22 16:10:24,800] INFO django.server "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[2025-06-22 16:10:24,803] INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-06-22 16:10:24,811] INFO django.server "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[2025-06-22 16:10:24,831] INFO django.server "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[2025-06-22 16:10:24,833] INFO django.server "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[2025-06-22 16:10:24,843] INFO django.server "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+[2025-06-22 16:10:24,945] WARNING django.request Not Found: /favicon.ico
+[2025-06-22 16:10:24,950] INFO django.server "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[2025-06-22 16:10:24,950] INFO django.server "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[2025-06-22 16:10:38,583] INFO django.server "POST /api/token/ HTTP/1.1" 200 483
+[2025-06-22 16:11:22,555] INFO orders.serializers Subtotal '100.00', Total '412.0000'
+[2025-06-22 16:11:22,560] INFO orders.views Order created
+[2025-06-22 16:11:22,561] INFO django.server "POST /api/orders/ HTTP/1.1" 201 40
+[2025-06-22 16:11:28,808] INFO django.server "GET /api/orders/3 HTTP/1.1" 301 0
+[2025-06-22 16:11:28,828] WARNING django.request Method Not Allowed: /api/orders/3/
+[2025-06-22 16:11:28,828] WARNING django.server "GET /api/orders/3/ HTTP/1.1" 405 40
+[2025-06-22 16:12:02,952] INFO django.server "GET /api/orders/ HTTP/1.1" 200 930

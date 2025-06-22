@@ -23,7 +23,7 @@ class OrderSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         items_data = validated_data.pop('items')
-        client = Client.objects.get(id=1) #self.context['request'].user
+        client = self.context['request'].user #Client.objects.get(id=1)
         subtotal = Decimal('0.00')
         validated_items = []
 
