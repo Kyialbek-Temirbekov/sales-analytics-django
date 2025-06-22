@@ -24,7 +24,7 @@ import os
 log = logging.getLogger(__name__)
 
 class OrderStatusUpdateApiView(APIView):
-    @swagger_auto_schema(request_body=OrderStatusSerializer)
+    @swagger_auto_schema(request_body=OrderStatusSerializer, operation_description="Update order status")
     def patch(self, request, pk):
         order = get_object_or_404(Order, pk=pk)
         serializer = OrderStatusSerializer(order, data=request.data, partial=True)
@@ -44,7 +44,7 @@ class OrderStatusUpdateApiView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class OrderListCreateView(APIView):
-    @swagger_auto_schema(request_body=OrderSerializer)
+    @swagger_auto_schema(request_body=OrderSerializer, operation_description="Make order")
     def post(self, request):
         serializer = OrderSerializer(data=request.data, context={'request': request})
         if serializer.is_valid():
@@ -53,6 +53,9 @@ class OrderListCreateView(APIView):
             return Response({"message": "Order created successfully"}, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
+    @swagger_auto_schema(
+        operation_description="Get orders of user",
+    )
     def get(self, request):
         user = request.user
         orders = Order.objects.filter(client=user).order_by('-created_at')
@@ -76,7 +79,8 @@ class ReportApiView(APIView):
                 type=openapi.TYPE_STRING,
                 format='date'
             )
-        ]
+        ],
+        operation_description="Get sales analytics report"
     )
     def get(self, request):
         start_str = request.GET.get('start')
