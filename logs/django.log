@@ -9,3 +9,56 @@
 [2025-06-22 15:30:21,485] INFO orders.serializers Subtotal '100.00', Total '412.0000'
 [2025-06-22 15:30:21,490] INFO orders.views Order created
 [2025-06-22 15:30:21,491] INFO django.server "POST /orders/ HTTP/1.1" 201 40
+[2025-06-22 15:37:15,249] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-22 15:39:09,841] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-22 15:39:15,276] INFO django.server "GET /swagger/ HTTP/1.1" 200 2222
+[2025-06-22 15:39:15,339] INFO django.server "GET /static/drf-yasg/style.css HTTP/1.1" 304 0
+[2025-06-22 15:39:15,352] INFO django.server "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 304 0
+[2025-06-22 15:39:15,353] INFO django.server "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 304 0
+[2025-06-22 15:39:15,356] INFO django.server "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 304 0
+[2025-06-22 15:39:15,357] INFO django.server "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 304 0
+[2025-06-22 15:39:15,357] INFO django.server "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 304 0
+[2025-06-22 15:39:15,358] INFO django.server "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 304 0
+[2025-06-22 15:39:15,558] INFO django.server "GET /swagger/?format=openapi HTTP/1.1" 200 7562
+[2025-06-22 15:39:26,948] INFO django.utils.autoreload /home/kyialbek/Projects/python_workspace/Kassir/saleanalytic/settings.py changed, reloading.
+[2025-06-22 15:39:27,562] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-22 15:39:30,215] INFO django.utils.autoreload /home/kyialbek/Projects/python_workspace/Kassir/orders/views.py changed, reloading.
+[2025-06-22 15:39:31,030] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-22 15:39:38,256] INFO django.server "GET /swagger/ HTTP/1.1" 200 2222
+[2025-06-22 15:39:38,514] INFO django.server "GET /swagger/?format=openapi HTTP/1.1" 200 7562
+[2025-06-22 15:41:17,768] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-22 15:41:25,632] INFO django.server "GET /swagger/ HTTP/1.1" 200 2222
+[2025-06-22 15:41:25,883] INFO django.server "GET /swagger/?format=openapi HTTP/1.1" 200 7562
+[2025-06-22 15:42:10,332] INFO django.utils.autoreload /home/kyialbek/Projects/python_workspace/Kassir/orders/views.py changed, reloading.
+[2025-06-22 15:42:10,967] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-22 15:42:21,829] INFO django.utils.autoreload /home/kyialbek/Projects/python_workspace/Kassir/orders/views.py changed, reloading.
+[2025-06-22 15:42:22,375] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-22 15:42:30,706] INFO django.server "GET /swagger/ HTTP/1.1" 200 2222
+[2025-06-22 15:42:30,946] INFO django.server "GET /swagger/?format=openapi HTTP/1.1" 200 7562
+[2025-06-22 15:45:35,308] INFO django.utils.autoreload /home/kyialbek/Projects/python_workspace/Kassir/orders/views.py changed, reloading.
+[2025-06-22 15:45:35,869] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-22 15:46:05,157] INFO django.utils.autoreload /home/kyialbek/Projects/python_workspace/Kassir/orders/views.py changed, reloading.
+[2025-06-22 15:46:05,644] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-22 15:46:15,252] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-22 15:46:19,580] INFO django.server "GET /swagger/ HTTP/1.1" 200 2222
+[2025-06-22 15:46:19,866] INFO django.server "GET /swagger/?format=openapi HTTP/1.1" 200 7780
+[2025-06-22 15:50:06,057] INFO django.utils.autoreload /home/kyialbek/Projects/python_workspace/Kassir/orders/views.py changed, reloading.
+[2025-06-22 15:50:06,609] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-22 15:50:26,463] INFO django.utils.autoreload /home/kyialbek/Projects/python_workspace/Kassir/orders/views.py changed, reloading.
+[2025-06-22 15:50:26,914] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-22 15:50:47,651] INFO django.utils.autoreload Watching for file changes with StatReloader
+
+[2025-06-22 15:53:54,342] INFO django.utils.autoreload /home/kyialbek/Projects/python_workspace/Kassir/orders/views.py changed, reloading.
+[2025-06-22 15:53:54,916] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-22 15:54:01,034] INFO orders.views Sales Analytics report created
+[2025-06-22 15:54:01,035] INFO django.server "GET /reports/sales/ HTTP/1.1" 200 10126
+[2025-06-22 15:54:50,428] INFO orders.views Sales Analytics report created
+[2025-06-22 15:54:50,429] INFO django.server "GET /reports/sales/?start=2025-06-01&end=2025-06-30 HTTP/1.1" 200 10123
+[2025-06-22 15:55:11,099] INFO orders.views Sales Analytics report created
+[2025-06-22 15:55:11,100] INFO django.server "GET /reports/sales/?start=2025-06-01&end=2025-06-20 HTTP/1.1" 200 8532
+[2025-06-22 15:59:12,519] INFO django.utils.autoreload /home/kyialbek/Projects/python_workspace/Kassir/orders/views.py changed, reloading.
+[2025-06-22 15:59:13,046] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-22 15:59:21,600] INFO orders.views Sales Analytics report created
+[2025-06-22 15:59:21,600] INFO django.server "GET /reports/sales/?start=2025-06-01&end=2025-06-20 HTTP/1.1" 200 7759
+[2025-06-22 15:59:31,869] INFO orders.views Sales Analytics report created
+[2025-06-22 15:59:31,870] INFO django.server "GET /reports/sales/?start=2025-06-01&end=2025-06-25 HTTP/1.1" 200 10127
