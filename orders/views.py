@@ -16,7 +16,10 @@ import datetime
 from jinja2 import Environment, FileSystemLoader
 from weasyprint import HTML
 from io import BytesIO
+import logging
 import os
+
+log = logging.getLogger(__name__)
 
 class OrderStatusUpdateApiView(APIView):
     @swagger_auto_schema(request_body=OrderStatusSerializer)
@@ -34,6 +37,7 @@ class OrderStatusUpdateApiView(APIView):
                     product.save()
             
             serializer.save()
+            log.info('Order status updated')
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
@@ -43,7 +47,7 @@ class OrderListCreateView(APIView):
         serializer = OrderSerializer(data=request.data, context={'request': request})
         if serializer.is_valid():
             serializer.save()
-
+            log.info('Order created')
             return Response({"message": "Order created successfully"}, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
@@ -86,6 +90,7 @@ class ReportApiView(APIView):
             'orders': orders,
         }
         pdf_file = render_pdf('report.html', context)
+        log.info('Sales Analytics report created')
         return FileResponse(pdf_file, content_type='application/pdf')
 
 def render_pdf(template_name, context):

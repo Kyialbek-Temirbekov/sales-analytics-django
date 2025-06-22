@@ -24,7 +24,7 @@ from rest_framework_simplejwt.views import (
     TokenRefreshView,
 )
 from products.views import ProductDetailApiView, ProductListCreateApiView
-from accounts.views import ClientListCreateApiView
+from accounts.views import ClientListCreateApiView, ClientDetailApiView
 from orders.views import OrderListCreateView, OrderStatusUpdateApiView, ReportApiView
 
 schema_view = get_schema_view(
@@ -46,6 +46,7 @@ urlpatterns = [
     path('products/<int:pk>/', ProductDetailApiView.as_view(), name='product-view'),
     path('products/', ProductListCreateApiView.as_view(), name='product-list-create-view'),
 
+    path('clients/<int:pk>/', ClientDetailApiView.as_view(), name='client-view'),
     path('clients/', ClientListCreateApiView.as_view(), name='client-list-create-view'),
 
     path('orders/<int:pk>/', OrderStatusUpdateApiView.as_view(), name='order-status-update-view'),
